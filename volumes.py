@@ -3,7 +3,16 @@
 from math import pi 
 
 def cylinder_volume(radius, height):
-    #calculate the volume of a cylinder for given radius and height
+    """
+    Function to calculate the volume of a cylinder for given radius and height
+
+    Inputs
+    radius: radius of cylinder
+    height: height of cylinder
+
+    Returns
+    vol: volume
+    """
     if radius < 0 or height < 0:
         raise ValueError
     else:
@@ -13,7 +22,16 @@ def cylinder_volume(radius, height):
         
 
 def torus_volume(outerR, innerR):
-    #Return the volume of a torus for given radii 
+    """
+    Function to calculate the volume of a torus for given radius and height
+
+    Inputs
+    outerR: outer radius of torus circle
+    innerR: inner circle radius
+
+    Returns
+    vol: volume
+    """
     if outerR < 0 or innerR < 0:
         raise ValueError
     else:
