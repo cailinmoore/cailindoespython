@@ -15,7 +15,7 @@ def close(a,b,c):
         
 
 if __name__ == "__main__":
-    check = close(4, 3, 60)
+    check = close(600, 3, 60)
 
     if check == False:
         print("Absolute difference is not less than the third number.")
