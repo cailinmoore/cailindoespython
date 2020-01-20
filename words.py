@@ -12,12 +12,9 @@ def letter_count(string, letter):
     """
     
     num = string.lower().count(letter)
-    if num == 0:
-        print("Oops! Looks like that letter isn't in that word.")
-    else:
-        return num
+    return num
 
 if __name__ == "__main__":
-    test = letter_count("heLlo", 'l')
+    test = letter_count('helloworld', 'l')
     print(test)
 

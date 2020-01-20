@@ -34,6 +34,8 @@ def torus_volume(outerR, innerR):
     """
     if outerR < 0 or innerR < 0:
         raise ValueError
+    elif innerR > outerR:
+        raise ValueError
     else:
         r = (outerR - innerR)/2 #minor radius
         R = innerR + r #major radius
@@ -49,6 +51,6 @@ if __name__ == "__main__":
     print('Cylinder volume:')
     print(cy)
 
-    tor = torus_volume(2,5)
+    tor = torus_volume(20,5)
     print('Torus Volume:')
     print(tor)
