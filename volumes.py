@@ -21,25 +21,21 @@ def cylinder_volume(radius, height):
         
         
 
-def torus_volume(r1, r2):
+def torus_volume(innerR, outerR):
     """
     Function to calculate the volume of a torus for given radius and height
 
     Inputs
-    r1,r2: input radii
+    innerR, outerR: input radii
 
     Returns
     vol: volume
     """
-    if r1 < 0 or r2 < 0:
+    if innerR < 0 or outerR < 0:
+        raise ValueError
+    elif innerR > outerR:
         raise ValueError
     else:
-        if r1>r2:
-            outerR = r1
-            innerR = r2
-        else:
-            innerR = r1
-            outerR = r2
         r = (outerR - innerR)/2 #minor radius
         R = innerR + r #major radius
 
