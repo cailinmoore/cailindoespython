@@ -10,7 +10,10 @@ def gcd(x,y):
     parameters: x and y are numbers you are looking for a greatest common denominator for 
     returns: x is the greatest common denominator of inputs x and y 
     '''
-    
+    if x < 0 or y < 0:
+        x = abs(x)
+        y = abs(y)
+        
     #code taken from https://www.geeksforgeeks.org/gcd-in-python/
     while y:
         x, y = y, x % y
