@@ -14,15 +14,16 @@ def gcd(x,y):
         x = abs(x)
         y = abs(y)
         
-    #code taken from https://www.geeksforgeeks.org/gcd-in-python/
-    while y:
-        x, y = y, x % y
+    while y != 0:
+        c = y
+        y = x % y 
+        x = c
 
     return x 
 
 if __name__ == "__main__":
-    a = random.randint(1,100)
-    b = random.randint(1,100)
+    a = random.randint(1,1000)
+    b = random.randint(1,1000)
     answer = gcdNative(a,b)
     check = gcd(a,b)
 

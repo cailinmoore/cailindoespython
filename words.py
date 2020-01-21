@@ -10,16 +10,19 @@ def letter_count(string, letter):
         Returns 
         num: number of instances  
     """
+    if not(isinstance(string, str)) or not(isinstance(letter, str)):
+        raise ValueError
     
     lword = string.lower()
+    lletter = letter.lower()
     count = 0
     for i in lword:
-        if letter == i:
+        if lletter == i:
             count = count+1
     
     return count
 
 if __name__ == "__main__":
-    test = letter_count('helLoworLd', 'l')
+    test = letter_count('helLoworLd', 'L')
     print(test)
 

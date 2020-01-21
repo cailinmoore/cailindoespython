@@ -50,6 +50,6 @@ if __name__ == "__main__":
     print('Cylinder volume:')
     print(cy)
 
-    tor = torus_volume(20,5)
+    tor = torus_volume(5,20)
     print('Torus Volume:')
     print(tor)
