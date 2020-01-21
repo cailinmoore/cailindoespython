@@ -7,7 +7,7 @@ def close(a,b,c):
     """
 
     if isinstance(a, str) or isinstance(b, str) or isinstance(c, str):
-        return "Hmm make sure you are entering integer values only!"
+        raise ValueError
     elif abs(a-b) > c or abs(a-b) == c:
         return False
     elif abs(a-b) < c:
